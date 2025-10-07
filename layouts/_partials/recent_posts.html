@@ -1,0 +1,22 @@
+{{ $blogPosts := where site.RegularPages "Section" "blog" }}
+{{ $recentPosts := first 5 $blogPosts }}
+
+<a href="/blog/">
+  <h1>Recent Posts</h1>
+</a>
+
+{{ range $recentPosts }}
+<div class="my-4">
+  <article class="card">
+    <div class="card-body">
+      <div class="flex gap-4">
+        <h2 class="card-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <time>{{ .Date.Format "January 2, 2006" }}</time>
+      </div>
+      <p>{{ .Summary }}</p>
+      <a href="{{ .Permalink }}" class="btn btn-primary btn-outline hover:bg-transparent hover:text-primary">Read More</a>
+    </div>
+  </article>
+</div>
+
+{{ end }}

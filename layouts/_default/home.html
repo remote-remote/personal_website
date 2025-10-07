@@ -1,0 +1,37 @@
+
+{{ define "main" }}
+<div class="h-screen">
+  <div class="hero bg-base-200 h-full">
+    <div class="hero-content text-center">
+      <div>
+        <h1 class="text-5xl font-bold">Jason Amador</h1>
+        <div class="py-6">
+            <p>
+Software engineer specializing in real-time data pipelines and backend infrastructure.            </p>
+            <p>
+ I turn ambiguous requirements into working systems through rapid prototyping and collaboration.
+            </p>
+            <p>
+ Technical leadership means keeping teams aligned on what actually matters.
+
+            </p>
+        </div>
+
+        <div>
+          <a class="btn btn-primary btn-outline" href="/resume">Resume</a>
+          <a class="btn btn-primary btn-outline" href="/blog">Blog</a>
+          <a class="btn btn-primary btn-outline" href="/projects">Projects</a>
+        </div>
+        <div class="flex justify-center gap-4 my-4">
+          <a href="{{ .Site.Data.social.github }}" class="w-10 h-10 text-primary">
+            {{ partial "icons/github" . }}
+          </a>
+          <a href="{{ .Site.Data.social.linkedin }}" class="w-10 h-10 text-primary">
+            {{ partial "icons/linkedin" . }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}

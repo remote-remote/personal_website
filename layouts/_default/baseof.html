@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+  <head>
+    <title>{{ .Site.Title }} - {{ .Page.Title }}</title>
+    {{ with (templates.Defer (dict "key" "global")) }} {{ partial "css.html" .
+    }} {{ end }}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  </head>
+  <body class="font-terminal">
+    {{ block "main" . }} {{ end }}
+  </body>
+</html>

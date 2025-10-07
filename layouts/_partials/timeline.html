@@ -1,0 +1,24 @@
+{{ $timeline := . }}
+<ul class="timeline timeline-vertical">
+  {{ range $index, $item := $timeline }}
+  <li>
+    <hr class="{{ if gt $index 0 }}bg-base-content{{ end }}" />
+    
+    <div class="timeline-start mr-8">
+      {{ $item.date }}
+    </div>
+    
+    <!-- <div class="timeline-middle"> -->
+    <!--   <icon name="" class="text-primary/70" /> -->
+    <!-- </div> -->
+    
+    <div class="timeline-end ml-8 timeline-box border border-primary/50 text-sm shadow-sm shadow-primary/20">
+      {{ $item.content }}
+    </div>
+    
+    {{ if lt $index (sub (len $timeline) 1) }}
+      <hr class="bg-base-content" />
+    {{ end }}
+  </li>
+  {{ end }}
+</ul>

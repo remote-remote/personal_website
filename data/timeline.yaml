@@ -1,0 +1,63 @@
+- date: "1998"
+  icon: "hero-academic-cap"
+  content: Starting writing C++ in high school, building silly games.
+- date: "2001"
+  icon: "hero-musical-note"
+  content: Sharp turn to music, chased that dream to the bitter end.
+- date: "Mar 2018" 
+  icon: "hero-academic-cap"
+  content: Completed full-stack web development bootcamp.
+- date: "Sep 2018" 
+  icon: "hero-code-bracket"
+  content: Started at Swytch building core platform APIs, asset validation systems, and dashboard components.
+- date: "2019"
+  icon: "hero-shield-check"
+  content: Built customer dashboard with energy analytics, 2FA authentication, and device management features.
+- date: "Early 2020" 
+  icon: "hero-signal"
+  content: Developed IoT connectivity layer for real-time meter data and OAuth2 authorization system.
+- date: "Mid 2020"
+  icon: "hero-building-office"
+  content: Architected multi-tenant organization system with user management and virtual meter aggregation.
+- date: "Jan 2021" 
+  icon: "hero-arrow-trending-up"
+  content: Promoted to Senior Engineer, began architecting distributed load matching algorithms.
+- date: "Apr 2021" 
+  icon: "hero-bolt"
+  content: Launched serverless load matching engine using Lambda functions, SQS, and DynamoDB state storage.
+- date: "Jul 2021" 
+  icon: "hero-cube-transparent"
+  content: Built virtual energy attribution system with onsite offsets and contract-based matching.
+- date: "Late 2021"
+  icon: "hero-wrench-screwdriver"
+  content: Migrated core services to containerized infrastructure and implemented service monitoring.
+- date: "Early 2022" 
+  icon: "hero-chart-pie"
+  content: Developed attribution post-processing with negative footprint calculations and DataDog integration.
+- date: "Mid 2022" 
+  icon: "hero-document-chart-bar"
+  content: Built comprehensive reporting system with utility comparison metrics and custom report generation.
+- date: "Late 2022" 
+  icon: "hero-calculator"
+  content: Started accounting monorepo for carbon certificate financial tracking and reconciliation.
+- date: "Early 2023" 
+  icon: "hero-arrow-down-tray"
+  content: Built data lake integrations with Snowflake destination and chunked data processing.
+- date: "Mid 2023" 
+  icon: "hero-presentation-chart-line"
+  content: Developed Dashboard v2 with TypeScript/Vue architecture and real-time energy analytics.
+- date: "Aug 2023"
+  icon: "hero-server"
+  content: Architected System Manager in Ruby on Rails for enterprise account and asset management.
+- date: "Oct 2023" 
+  icon: "hero-building-office-2"
+  content: Integrated Frontegg enterprise SSO with multi-tenant architecture and role synchronization.
+- date: "Early 2024"
+  icon: "hero-arrow-path"
+  content: Led MongoDB to PostgreSQL migration across 15+ microservices with zero-downtime deployment.
+- date: "Sep 2024"
+  icon: "hero-star"
+  content: Promoted to Staff Engineer, leading API v2 architecture with OpenAPI standards.
+- date: "Present"
+  icon: "hero-rocket-launch"
+  content: Architecting supplier asset management and REC tracking platform for enterprise renewable energy programs.
