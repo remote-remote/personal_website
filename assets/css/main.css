@@ -39,6 +39,9 @@
     }
   }
 
+  li {
+    @apply list-disc;
+  }
 
   .container {
     a {

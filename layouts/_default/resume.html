@@ -1,4 +1,16 @@
 {{ define "main" }}
-{{ partial "timeline.html" .Site.Data.timeline }}
+{{ partial "header" . }}
+<div class="container max-w-4xl mx-auto">
+  <div class="flex justify-between items-center my-4">
+    <h1 class="text-5xl font-bold">Resume</h1>
+    <a href="/static/resume.pdf">Download PDF</a>
+  </div>
+  <div class="card">
+    <div class="card-body">
+{{ .Content }}
+    </div>
+
+  </div>
+</div>
 {{ end }}
 
