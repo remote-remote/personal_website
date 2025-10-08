@@ -1,0 +1,44 @@
+{{ define "main" }}
+  <div class="container max-w-4xl mx-auto">
+    <div>
+      <h1> {{ .Title }}</h1>
+      {{ .Content }}
+    </div>
+    <div class="py-4">
+      <h2>Project Posts</h2>
+    </div>
+
+    {{ if eq .File.Dir "content/projects/" }}
+      {{/* Main projects list page */}}
+      {{ $projectSections := where .Pages "Kind" "section" }}
+      {{ $sortedProjects := slice }}
+      {{ range $projectSections }}
+        {{ $latestDate := .Date }}
+        {{ if .RegularPages }}
+          {{ $latestPost := index (.RegularPages.ByDate.Reverse) 0 }}
+          {{ $latestDate = $latestPost.Date }}
+        {{ end }}
+        {{ $sortedProjects = $sortedProjects | append (dict "section" . "latestDate" $latestDate) }}
+      {{ end }}
+      {{ $sortedProjects = sort $sortedProjects "latestDate" "desc" }}
+
+      {{ range $sortedProjects }}
+      <div class="my-4 border-b-1 border-primary/40">
+        <article>
+          <div>
+            <div class="flex gap-4">
+              <h2><a href="{{ .section.Permalink }}">{{ .section.Title }}</a></h2>
+              <time>{{ .latestDate.Format "January 2, 2006" }}</time>
+            </div>
+            <p>{{ .section.Summary }}</p>
+          </div>
+        </article>
+      </div>
+      {{ end }}
+    {{ else }}
+      {{/* Individual project posts list */}}
+      {{ $projectPosts := .RegularPages }}
+      {{ partial "recent_posts" $projectPosts }}
+    {{ end }}
+  </div>
+{{ end }}

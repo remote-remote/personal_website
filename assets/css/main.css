@@ -14,7 +14,7 @@
 
 @layer base {
   h1 {
-    @apply text-2xl font-bold text-primary/70;
+    @apply text-2xl font-bold text-primary;
   }
 
   h2 {
@@ -40,12 +40,12 @@
   }
 
   li {
-    @apply list-disc;
+    @apply list-disc ml-4;
   }
 
   .container {
     a {
-      @apply text-secondary/80 hover:text-shadow-sm hover:text-secondary/90 hover:text-shadow-primary/20;
+      @apply text-secondary hover:text-shadow-sm hover:text-shadow-primary/20;
     }
   }
 
@@ -54,6 +54,6 @@
 
 @layer components {
   .card {
-    @apply card bg-base-300 shadow-md shadow-primary/20 border border-primary/70;
+    @apply card bg-base-300 shadow-md shadow-primary/20 border border-primary;
   }
 }

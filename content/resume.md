@@ -6,7 +6,7 @@ layout: resume
 
 # Jason Amador
 
-Austin, TX | (512) 317-4974 | [jason.amador@gmail.com](mailto:jason.amador@gmail.com)   
+Austin, TX | [jason.amador@gmail.com](mailto:jason.amador@gmail.com)   
 LinkedIn: jason-amador  
 Work Github: jasonamador    
 Personal Github: remote-remote  
