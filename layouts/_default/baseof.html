@@ -1,13 +1,14 @@
 <!doctype html>
-<html>
+<html data-theme="jam">
   <head>
     <title>{{ .Site.Title }} - {{ .Page.Title }}</title>
     {{ with (templates.Defer (dict "key" "global")) }} {{ partial "css.html" .
     }} {{ end }}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   </head>
   <body class="font-terminal">
     {{ partial "header" . }}
+    <div class="container max-w-4xl mx-auto px-4">
+    </div>
     {{ block "main" . }} {{ end }}
   </body>
 </html>

@@ -1,14 +1,12 @@
 {{ define "main" }}
   <div class="container max-w-4xl mx-auto">
-    <div>
+    <div class="mb-4">
       <h1> {{ .Title }}</h1>
       {{ .Content }}
     </div>
-    <div class="py-4">
-      <h2>Project Posts</h2>
-    </div>
+    <div class="divider"></div>
 
-    {{ if eq .File.Dir "content/projects/" }}
+    {{ if eq .File.Dir "projects/" }}
       {{/* Main projects list page */}}
       {{ $projectSections := where .Pages "Kind" "section" }}
       {{ $sortedProjects := slice }}
@@ -23,7 +21,7 @@
       {{ $sortedProjects = sort $sortedProjects "latestDate" "desc" }}
 
       {{ range $sortedProjects }}
-      <div class="my-4 border-b-1 border-primary/40">
+      <div class="my-4">
         <article>
           <div>
             <div class="flex gap-4">
@@ -34,8 +32,12 @@
           </div>
         </article>
       </div>
+      <div class="divider"></div>
       {{ end }}
     {{ else }}
+      <div class="py-4">
+        <h2>Project Posts</h2>
+      </div>
       {{/* Individual project posts list */}}
       {{ $projectPosts := .RegularPages }}
       {{ partial "recent_posts" $projectPosts }}

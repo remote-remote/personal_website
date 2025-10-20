@@ -4,17 +4,50 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@plugin "daisyui" {
-  themes: light --default, sunset --prefersdark;
-};
+
+@plugin "daisyui";
+@plugin "daisyui/theme" {
+  name: "jam";
+  default: true;
+  prefersdark: false;
+  color-scheme: "light";
+  --color-base-100: oklch(21% 0.006 56.043);
+  --color-base-200: oklch(26% 0.007 34.298);
+  --color-base-300: oklch(37% 0.01 67.558);
+  --color-base-content: oklch(97% 0.001 106.424);
+  --color-primary: oklch(65% 0.135 66.442);
+  --color-primary-content: oklch(93% 0.034 272.788);
+  --color-secondary: oklch(50% 0.118 165.612);
+  --color-secondary-content: oklch(95% 0.052 163.051);
+  --color-accent: oklch(40% 0.17 325.612);
+  --color-accent-content: oklch(90% 0.076 319.62);
+  --color-neutral: oklch(70% 0.01 56.259);
+  --color-neutral-content: oklch(14% 0.005 285.823);
+  --color-info: oklch(44% 0.11 240.79);
+  --color-info-content: oklch(95% 0.026 236.824);
+  --color-success: oklch(76% 0.177 163.223);
+  --color-success-content: oklch(26% 0.051 172.552);
+  --color-warning: oklch(76% 0.188 70.08);
+  --color-warning-content: oklch(96% 0.059 95.617);
+  --color-error: oklch(63% 0.237 25.331);
+  --color-error-content: oklch(96% 0.015 12.422);
+  --radius-selector: 0.5rem;
+  --radius-field: 0.25rem;
+  --radius-box: 0.5rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
 
 @theme {
-  --font-terminal: "JetBrains Mono", "Consolas", "Monaco", monospace;
+  --font-terminal: "Fira Code", "Consolas", "Monaco", monospace;
 }
 
 @layer base {
   h1 {
-    @apply text-2xl font-bold text-primary;
+    @apply text-3xl font-bold;
   }
 
   h2 {
@@ -45,7 +78,7 @@
 
   .container {
     a {
-      @apply text-secondary hover:text-shadow-sm hover:text-shadow-primary/20;
+      @apply link;
     }
   }
 
@@ -54,6 +87,6 @@
 
 @layer components {
   .card {
-    @apply card bg-base-300 shadow-md shadow-primary/20 border border-primary;
+    @apply card bg-base-300 shadow-md shadow-white/10 border border-base-300;
   }
 }

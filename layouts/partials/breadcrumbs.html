@@ -1,0 +1,10 @@
+{{ if not .IsHome }}
+<nav class="text-sm breadcrumbs">
+  <ul>
+    {{ range .Ancestors.Reverse }}
+      <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+    <li>{{ .Title }}</li>
+  </ul>
+</nav>
+{{ end }}
