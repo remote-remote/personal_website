@@ -4,9 +4,9 @@
 <div class="my-4 border-b-1 border-base-100">
   <article>
     <div>
-      <div class="flex gap-4">
+      <div class="flex flex-col md:flex-row gap-2 md:gap-4">
         <h2 class="card-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-        <time>{{ .Date.Format "January 2, 2006" }}</time>
+        <time class="text-sm md:text-base">{{ .Date.Format "January 2, 2006" }}</time>
       </div>
       <p>{{ .Summary }}</p>
     </div>

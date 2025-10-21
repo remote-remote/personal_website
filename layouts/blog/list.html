@@ -1,5 +1,5 @@
 {{ define "main" }} 
-<div class="container max-w-4xl mx-auto">
+<div>
   <h1> {{ .Title }}</h1>
   {{ .Content }}
   {{ $blogPosts := where site.RegularPages "Section" "blog" }}

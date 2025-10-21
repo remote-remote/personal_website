@@ -1,17 +1,22 @@
 <!doctype html>
 <html data-theme="jam">
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ .Site.Title }} - {{ .Page.Title }}</title>
     {{ with (templates.Defer (dict "key" "global")) }} {{ partial "css.html" .
     }} {{ end }}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
   </head>
   <body class="font-terminal">
     <div class="h-screen">
       <div class="hero bg-base-200 h-full">
-        <div class="hero-content text-center">
+        <div class="hero-content text-center px-4">
           <div>
-            <h1 class="text-5xl font-bold mb-6">Jason Amador</h1>
+            <h1 class="text-3xl md:text-5xl font-bold mb-6">Jason Amador</h1>
             <div class="mb-2">
               {{ range $item := .Site.Data.taglines }}
                 <p>
@@ -20,10 +25,10 @@
               {{ end }}
             </div>
 
-            <div class="mb-6">
-              <a class="btn btn-primary btn-outline" href="/resume">Resume</a>
-              <a class="btn btn-primary btn-outline" href="/blog">Blog</a>
-              <a class="btn btn-primary btn-outline" href="/projects">Projects</a>
+            <div class="mb-6 flex flex-wrap justify-center gap-2">
+              <a class="btn btn-primary btn-outline btn-sm md:btn-md" href="/resume">Resume</a>
+              <a class="btn btn-primary btn-outline btn-sm md:btn-md" href="/blog">Blog</a>
+              <a class="btn btn-primary btn-outline btn-sm md:btn-md" href="/projects">Projects</a>
             </div>
 
             <div class="flex justify-center gap-4">
