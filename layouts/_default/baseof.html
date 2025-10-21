@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ .Site.Title }} - {{ .Page.Title }}</title>
-    {{ with (templates.Defer (dict "key" "global")) }} {{ partial "css.html" .
-    }} {{ end }}
+    {{ partial "css.html" . }}
   </head>
   <body class="font-terminal">
     {{ partial "header" . }}

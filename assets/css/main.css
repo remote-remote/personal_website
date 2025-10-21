@@ -42,7 +42,7 @@
 }
 
 @theme {
-  --font-terminal: "Fira Code", "Consolas", "Monaco", monospace;
+  --font-terminal: "Inconsolata", "Consolas", "Monaco", monospace;
 }
 
 @layer base {

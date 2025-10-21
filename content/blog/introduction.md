@@ -1,7 +1,6 @@
 ---
 title: "Hi, I'm Jason"
 date: 2025-10-06
-draft: true
 ---
 
 Like most nerdy kids, the first thing I tried to code was a game. There's something about creating a thing that reacts to a human's inputs in an interesting and engaging way that has always been thrilling for me, and the first time I got pixels moving around on a screen, I was hooked.
