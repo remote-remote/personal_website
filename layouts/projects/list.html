@@ -1,9 +1,22 @@
 {{ define "main" }}
 <div>
   <div class="mb-4">
+
+    <div class="flex items-center">
     <h1> {{ .Title }}</h1>
+  {{ if ne .File.Dir "projects/" }}
+    {{ with .Params.repository }}
+    <div class="mx-4 flex">
+      <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="w-6 h-6 text-primary">
+        {{ partial "icons/github" . }}
+      </a>
+    </div>
+    {{ end }}
+  {{ end }}
+    </div>
     {{ .Content }}
   </div>
+
   <div class="divider"></div>
 
   {{ if eq .File.Dir "projects/" }}
@@ -35,6 +48,7 @@
     <div class="divider"></div>
     {{ end }}
   {{ else }}
+    {{/* Individual project page */}}
     <div class="py-4">
       <h2>Project Posts</h2>
     </div>

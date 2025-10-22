@@ -13,6 +13,7 @@
       "head",
       "hr",
       "html",
+      "img",
       "li",
       "link",
       "meta",
@@ -50,6 +51,7 @@
       "gap-3",
       "gap-4",
       "h-10",
+      "h-6",
       "h-full",
       "h-screen",
       "hero",
@@ -69,6 +71,7 @@
       "md:p-8",
       "md:text-5xl",
       "md:text-base",
+      "mx-4",
       "mx-auto",
       "my-4",
       "p-4",
@@ -81,16 +84,24 @@
       "text-center",
       "text-primary",
       "text-sm",
-      "w-10"
+      "w-10",
+      "w-6"
     ],
     "ids": [
+      "ai-usage",
       "cleartrace",
+      "constraints",
+      "current-progress",
       "education",
       "jason-amador",
       "key-strengths",
+      "no-dependencies",
       "professional-experience",
       "recent-projects",
-      "technical-skills"
+      "scaling-goals",
+      "technical-skills",
+      "the-plan",
+      "whats-next"
     ]
   }
 }
