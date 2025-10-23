@@ -46,6 +46,10 @@
 }
 
 @layer base {
+  html {
+    font-size: 18px;
+  }
+
   h1 {
     @apply text-3xl font-bold my-2;
   }
@@ -80,6 +84,10 @@
     @apply list-disc ml-4;
   }
 
+  code {
+    @apply font-terminal text-primary;
+  }
+
   .container {
     a {
       @apply link;
@@ -87,7 +95,19 @@
   }
 
   .mermaid {
-    @apply card m-4 bg-base-300 flex justify-center items-center
+    @apply card m-4 bg-gray-400 flex justify-center items-center
+  }
+
+  blockquote {
+    @apply my-4 p-4 border-l-4 border-primary bg-base-200 rounded-r-md;
+
+    p:first-child {
+      @apply pt-0;
+    }
+
+    p:last-child {
+      @apply pb-0;
+    }
   }
 }
 

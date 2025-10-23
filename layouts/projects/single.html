@@ -1,7 +1,12 @@
-{{ define "main" }} 
+{{ define "main" }}
 <div>
-  <h1> {{ .Parent.Title }}</h1>
-  <h2> {{ .Title }}</h2>
-  {{ .Content }} 
+  <h1>{{ .Parent.Title }}</h1>
+  <h2>{{ .Title }}</h2>
+  {{ with .Params.image }}
+  <div class="my-4">
+    <img src="/images/{{ . }}" alt="{{ $.Title }}" class="w-full rounded-lg">
+  </div>
+  {{ end }}
+  {{ .Content }}
 </div>
 {{ end }}

@@ -1,10 +1,10 @@
 ---
 title: Pixel Canvas
-date: 2025-09-05
+date: 2025-08-05
 repository: https://github.com/remote-remote/pixel_canvas
+image: pixel-canvas.png
+summary: Pixel Canvas is a real-time collaborative canvas that I'm building as a learning project to better understand Elixir and the OTP platform. I chose this as a use-case that is easy to understand and test, and has high-throughput low-latency requirements.
 ---
-
-![Pixel Canvas Banner](/images/pixel-canvas.png)
 
 Pixel Canvas is a real-time collaborative canvas that I'm building as a learning project to better understand Elixir and the OTP platform.
 I chose this as a use-case that is easy to understand and test, and has high-throughput low-latency requirements.

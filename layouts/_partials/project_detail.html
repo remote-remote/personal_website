@@ -1,0 +1,7 @@
+{{/* Individual project page */}}
+<div class="py-4">
+  <h2>Project Posts</h2>
+</div>
+{{/* Individual project posts list */}}
+{{ $projectPosts := .RegularPages }}
+{{ partial "recent_posts" $projectPosts }}

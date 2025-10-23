@@ -1,60 +1,34 @@
 {{ define "main" }}
 <div>
   <div class="mb-4">
-
     <div class="flex items-center">
-    <h1> {{ .Title }}</h1>
-  {{ if ne .File.Dir "projects/" }}
-    {{ with .Params.repository }}
-    <div class="mx-4 flex">
-      <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="w-6 h-6 text-primary">
-        {{ partial "icons/github" . }}
-      </a>
+      <h1>{{ .Title }}</h1>
+      {{ if ne .File.Dir "projects/" }}
+        {{ with .Params.repository }}
+        <div class="mx-4 flex">
+          <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="w-6 h-6 text-primary">
+            {{ partial "icons/github" . }}
+          </a>
+        </div>
+        {{ end }}
+      {{ end }}
     </div>
+    {{ if ne .File.Dir "projects/" }}
+      {{ with .Params.image }}
+      <div class="my-4">
+        <img src="/images/{{ . }}" alt="{{ $.Title }}" class="w-full rounded-lg">
+      </div>
+      {{ end }}
     {{ end }}
-  {{ end }}
-    </div>
     {{ .Content }}
   </div>
 
   <div class="divider"></div>
 
   {{ if eq .File.Dir "projects/" }}
-    {{/* Main projects list page */}}
-    {{ $projectSections := where .Pages "Kind" "section" }}
-    {{ $sortedProjects := slice }}
-    {{ range $projectSections }}
-      {{ $latestDate := .Date }}
-      {{ if .RegularPages }}
-        {{ $latestPost := index (.RegularPages.ByDate.Reverse) 0 }}
-        {{ $latestDate = $latestPost.Date }}
-      {{ end }}
-      {{ $sortedProjects = $sortedProjects | append (dict "section" . "latestDate" $latestDate) }}
-    {{ end }}
-    {{ $sortedProjects = sort $sortedProjects "latestDate" "desc" }}
-
-    {{ range $sortedProjects }}
-    <div class="my-4">
-      <article>
-        <div>
-          <div class="flex flex-col md:flex-row gap-2 md:gap-4">
-            <h2><a href="{{ .section.Permalink }}">{{ .section.Title }}</a></h2>
-            <time class="text-sm md:text-base">{{ .latestDate.Format "January 2, 2006" }}</time>
-          </div>
-          <p>{{ .section.Summary }}</p>
-        </div>
-      </article>
-    </div>
-    <div class="divider"></div>
-    {{ end }}
+    {{ partial "projects_list" . }}
   {{ else }}
-    {{/* Individual project page */}}
-    <div class="py-4">
-      <h2>Project Posts</h2>
-    </div>
-    {{/* Individual project posts list */}}
-    {{ $projectPosts := .RegularPages }}
-    {{ partial "recent_posts" $projectPosts }}
+    {{ partial "project_detail" . }}
   {{ end }}
 </div>
 {{ end }}
